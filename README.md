@@ -54,5 +54,17 @@ The dissertation refers to the following three supplementary LaTeX files. They a
 | [`appendix-b-pattern-mining-methods.pdf`](appendices/appendix-b-pattern-mining-methods.pdf) | Documents the two pattern-mining procedures: the Support Vector Machine (SVM) method and the graph-based method using node labeling, edge filtering, Dual Simulation, and global-constraint validation. |
 | [`appendix-c-svm-feature-vector.pdf`](appendices/appendix-c-svm-feature-vector.pdf) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
 
-    â””â”€â”€ case-study-experienced-customer-en.png
-```
+
+## Publications Resulting from the Dissertation
+
+The following peer-reviewed publications constitute the principal scholarly outputs of this doctoral research:
+
+1. “BenchPDM: Benchmarking Pattern Detection Methods in Microservice-Based Systems Using Automatically Generated Pattern-Assisted Testbeds,” *Empirical Software Engineering*, 2026. **JCR Q1; Impact Factor: 3.6.** Dissertation contribution: the proposed benchmarking approach.
+
+2. “On the Engineering of Robust Microservice Architectures through Anti-Pattern Recognition,” *The Journal of Systems and Software*, 2026. **JCR Q1; Impact Factor: 4.1.** Dissertation contribution: the proposed pattern- and antipattern-detection approach.
+
+3. “Cloud Broker: A Systematic Mapping Study,” *IEEE Transactions on Services Computing*, 2023. **JCR Q1; Impact Factor: 5.8.** Dissertation contribution: the systematic mapping study.
+
+4. “A Two-Stage Location-Sensitive and User Preference-Aware Recommendation System,” *Expert Systems with Applications*, 2022. **JCR Q1; Impact Factor: 9.0.** Dissertation contribution: the proposed service-recommendation approach.
+
+5. “A Pattern-Aware Design and Implementation Guideline for Microservice-Based Systems,” in *Proceedings of the 27th International Computer Conference, Computer Society of Iran (CSICC)*, Tehran, Iran, 2022. Dissertation contribution: analysis of microservice design patterns.
