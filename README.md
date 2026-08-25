@@ -4,7 +4,7 @@ This repository provides supplementary material for a doctoral dissertation on s
 
 ## Research workflow
 
-The workflow begins with a dataset of microservice-based systems. Static-analysis artifacts—including service dependencies, annotations, imports, configuration files, and system structure—are used to detect architectural patterns and antipatterns. The resulting evidence supports a structural quality assessment of the candidate microservices. Detection methods are evaluated and compared through an automated benchmark, after which the selected high-quality microservices are passed to the infrastructure-recommendation stage.
+The workflow begins with a dataset of microservice-based systems. Static-analysis artifactsâ€”including service dependencies, annotations, imports, configuration files, and system structureâ€”are used to detect architectural patterns and antipatterns. The resulting evidence supports a structural quality assessment of the candidate microservices. Detection methods are evaluated and compared through an automated benchmark, after which the selected high-quality microservices are passed to the infrastructure-recommendation stage.
 
 ![Dissertation workflow: from microservice pattern and antipattern detection to IaaS recommendation](docs/dissertation-workflow-en.png)
 
@@ -16,13 +16,70 @@ The five stages shown in the figure are:
 4. **Infrastructure recommendation.** Microservices with equivalent business functionality may differ in non-functional characteristics such as cost, reliability, availability, and efficiency. Fuzzy C-Means (FCM) clustering reduces the cloud-provider search space, while customer preferences are processed by IANFRA to score candidate services and recommend a suitable IaaS option.
 5. **Final output.** A microservice with appropriate design quality is deployed on a suitable infrastructure service, with the objective of improving performance, cost suitability, quality, and user satisfaction.
 
+## IANFRA case studies
+
+The following case studies illustrate how the recommendation stage handles two forms of customer requirements. In both cases, FCM first limits the search space to services offered by nearby cloud providers. IANFRA then evaluates the candidate services against the customer's preferences and returns the highest-scoring service.
+
+### Case Study 1: Service selection from linguistic preferences
+
+![Case Study 1: IANFRA service selection from linguistic customer preferences](docs/case-study-linguistic-preferences-en.png)
+
+This case study represents a customer who specifies requirements through linguistic terms rather than exact numerical values: HDD and CPU are rated **High**, while RAM, bandwidth, and budget are rated **Medium**. Each linguistic term is mapped to fuzzy membership degrees. For example, the HDD requirement has membership degrees of 0.10, 0.35, and 0.92 for the Low, Medium, and High sets, respectively.
+
+FCM supplies three candidate services: S1 and S2 from provider P1 and S3 from provider P2. IANFRA evaluates the candidates through fuzzy rules that capture the relationships among capacity, processing power, bandwidth, price, and the customer's budget. The final scores are 0.71 for S1, 0.88 for S2, and 0.79 for S3. Consequently, **S2 from provider P1** is selected because it provides the strongest match to the customer's high HDD and CPU preferences, offers compatible RAM, and achieves the highest overall score despite its higher price.
+
+### Case Study 2: Service selection for an experienced customer
+
+![Case Study 2: IANFRA service selection from numerical requirements of an experienced customer](docs/case-study-experienced-customer-en.png)
+
+This case study represents an experienced customer who supplies precise numerical requirements: 8 TB HDD, 24 GB RAM, 3.5 GHz CPU, 6 Gbps bandwidth, and a budget of 600. The values are normalized to a common scale and then fuzzified into Low, Medium, and High membership degrees. For example, the normalized 8 TB HDD requirement has membership degrees of 0.05, 0.30, and 0.92 for the three fuzzy sets.
+
+The same FCM-derived candidate set is evaluated using rules that reward proximity to the requested hardware and bandwidth while penalizing prices that exceed the stated budget. The resulting scores are 0.74 for S1, 0.91 for S2, and 0.81 for S3. **S2 from provider P1** is again selected: its CPU and bandwidth exactly match the requested values, its remaining resources are sufficiently close to the customer's requirements, and its final score remains the highest after the price penalty is considered.
+
+| Comparison dimension | Case Study 1 | Case Study 2 |
+| --- | --- | --- |
+| Customer profile | Customer expressing qualitative preferences | Experienced customer providing precise requirements |
+| Input representation | Linguistic terms: Low, Medium, and High | Numerical resource and budget values |
+| Preprocessing | Direct fuzzification | Normalization followed by fuzzification |
+| Candidate scores | S1: 0.71; S2: 0.88; S3: 0.79 | S1: 0.74; S2: 0.91; S3: 0.81 |
+| Selected service | S2 from provider P1 | S2 from provider P1 |
+
 ## Supplementary appendix files
 
-The dissertation refers to the following three supplementary files. They are separated by purpose so that each appendix can be cited, reviewed, or included independently.
+The dissertation refers to the following three supplementary LaTeX files. They are separated by purpose so that each appendix can be cited, reviewed, or included independently.
 
 | File | Purpose |
 | --- | --- |
-| [`appendix-a-patterns-antipatterns.pdf`](appendices/appendix-a-patterns-antipatterns.pdf) | Defines the microservice design patterns and antipatterns examined in the dissertation, explains their architectural intent or quality risk, and states why they can be detected through static analysis. |
-| [`appendix-b-pattern-mining-methods.pdf`](appendices/appendix-b-pattern-mining-methods.pdf) | Documents the two pattern-mining procedures: the Support Vector Machine (SVM) method and the graph-based method using node labeling, edge filtering, Dual Simulation, and global-constraint validation. |
-| [`appendix-c-svm-feature-vector.pdf`](appendices/appendix-c-svm-feature-vector.pdf) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
+| [`appendix-a-patterns-antipatterns.tex`](appendices/appendix-a-patterns-antipatterns.tex) | Defines the microservice design patterns and antipatterns examined in the dissertation, explains their architectural intent or quality risk, and states why they can be detected through static analysis. |
+| [`appendix-b-pattern-mining-methods.tex`](appendices/appendix-b-pattern-mining-methods.tex) | Documents the two pattern-mining procedures: the Support Vector Machine (SVM) method and the graph-based method using node labeling, edge filtering, Dual Simulation, and global-constraint validation. |
+| [`appendix-c-svm-feature-vector.tex`](appendices/appendix-c-svm-feature-vector.tex) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
 
+The translated appendices preserve the original labels, cross-references, citations, algorithms, equations, and table structure so that references already present in the dissertation remain traceable.
+
+## LaTeX integration
+
+[`thesis-appendices-en.tex`](thesis-appendices-en.tex) is the master English LaTeX file and includes all three appendix files with `\input`. To compile it within the original dissertation project, retain the thesis dependencies used by the source document, including `IUST-Thesis.cls`, `commands.tex`, the `figs/` assets, and `empirical_software_engineering_references.bib`.
+
+If the appendices are included directly in another master document, use:
+
+```latex
+\input{appendices/appendix-a-patterns-antipatterns}
+\input{appendices/appendix-b-pattern-mining-methods}
+\input{appendices/appendix-c-svm-feature-vector}
+```
+
+## Repository structure
+
+```text
+.
+â”œâ”€â”€ README.md
+â”œâ”€â”€ thesis-appendices-en.tex
+â”œâ”€â”€ appendices/
+â”‚   â”œâ”€â”€ appendix-a-patterns-antipatterns.tex
+â”‚   â”œâ”€â”€ appendix-b-pattern-mining-methods.tex
+â”‚   â””â”€â”€ appendix-c-svm-feature-vector.tex
+â””â”€â”€ docs/
+    â”œâ”€â”€ dissertation-workflow-en.png
+    â”œâ”€â”€ case-study-linguistic-preferences-en.png
+    â””â”€â”€ case-study-experienced-customer-en.png
+```
