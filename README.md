@@ -26,6 +26,3 @@ The dissertation refers to the following three supplementary files. They are sep
 | [`appendix-b-pattern-mining-methods.pdf`](appendices/appendix-b-pattern-mining-methods.pdf) | Documents the two pattern-mining procedures: the Support Vector Machine (SVM) method and the graph-based method using node labeling, edge filtering, Dual Simulation, and global-constraint validation. |
 | [`appendix-c-svm-feature-vector.pdf`](appendices/appendix-c-svm-feature-vector.pdf) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
 
-The translated appendices preserve the original labels, cross-references, citations, algorithms, equations, and table structure so that references already present in the dissertation remain traceable.
-
-```
