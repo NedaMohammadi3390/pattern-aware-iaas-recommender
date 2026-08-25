@@ -50,9 +50,9 @@ The dissertation refers to the following three supplementary LaTeX files. They a
 
 | File | Purpose |
 | --- | --- |
-| [`appendix-a-patterns-antipatterns.pdf`](appendices/appendix-a-patterns-antipatterns.pdf) | Defines the microservice design patterns and antipatterns examined in the dissertation, explains their architectural intent or quality risk, and states why they can be detected through static analysis. |
-| [`appendix-b-pattern-mining-methods.pdf`](appendices/appendix-b-pattern-mining-methods.pdf) | Documents the two pattern-mining procedures: the Support Vector Machine (SVM) method and the graph-based method using node labeling, edge filtering, Dual Simulation, and global-constraint validation. |
-| [`appendix-c-svm-feature-vector.pdf`](appendices/appendix-c-svm-feature-vector.pdf) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
+|[`(anti)patterns-definition.pdf`]((anti)patterns-definition.pdf)| Defines the microservice design patterns and antipatterns examined in the dissertation, explains their architectural intent or quality risk, and states why they can be detected through static analysis. |
+|  [`PDMs.pdf`](PDMs.pdf)  | Documents the two pattern-mining procedures: the Support Vector Machine (SVM) method and the graph-based method using node labeling, edge filtering, Dual Simulation, and global-constraint validation. |
+| [`svm-feature-vector.pdf`](svm-feature-vector.pdf) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
 
 
 ## Publications Resulting from the Dissertation
