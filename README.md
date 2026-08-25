@@ -55,7 +55,7 @@ The dissertation refers to the following three supplementary LaTeX files. They a
 | [`svm-feature-vector.pdf`](appendices/svm-feature-vector.pdf) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
 
 
-## Publications Resulting from the Dissertation
+<!--## Publications Resulting from the Dissertation
 
 The following peer-reviewed publications constitute the principal scholarly outputs of this doctoral research:
 
@@ -67,9 +67,9 @@ The following peer-reviewed publications constitute the principal scholarly outp
 
 4. “A Two-Stage Location-Sensitive and User Preference-Aware Recommendation System,” *Expert Systems with Applications*, 2022. **JCR Q1; Impact Factor: 9.0.** Dissertation contribution: the proposed service-recommendation approach.
 
-5. “A Pattern-Aware Design and Implementation Guideline for Microservice-Based Systems,” in *Proceedings of the 27th International Computer Conference, Computer Society of Iran (CSICC)*, Tehran, Iran, 2022. Dissertation contribution: analysis of microservice design patterns.
+5. “A Pattern-Aware Design and Implementation Guideline for Microservice-Based Systems,” in *Proceedings of the 27th International Computer Conference, Computer Society of Iran (CSICC)*, Tehran, Iran, 2022. Dissertation contribution: analysis of microservice design patterns.-->
 
-6. ## Research Outputs and Publications
+ ## Research Outputs and Publications
 
 The research presented in this dissertation has resulted in, and has been supported by, the following peer-reviewed publications. These works address different components of the proposed research framework, including systematic analysis of cloud brokerage, microservice pattern and anti-pattern detection, benchmarking of pattern detection methods, service recommendation, and pattern-aware microservice design.
 
