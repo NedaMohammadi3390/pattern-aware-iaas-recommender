@@ -18,38 +18,14 @@ The five stages shown in the figure are:
 
 ## Supplementary appendix files
 
-The dissertation refers to the following three supplementary LaTeX files. They are separated by purpose so that each appendix can be cited, reviewed, or included independently.
+The dissertation refers to the following three supplementary files. They are separated by purpose so that each appendix can be cited, reviewed, or included independently.
 
 | File | Purpose |
 | --- | --- |
-| [`appendix-a-patterns-antipatterns.tex`](appendices/appendix-a-patterns-antipatterns.tex) | Defines the microservice design patterns and antipatterns examined in the dissertation, explains their architectural intent or quality risk, and states why they can be detected through static analysis. |
-| [`appendix-b-pattern-mining-methods.tex`](appendices/appendix-b-pattern-mining-methods.tex) | Documents the two pattern-mining procedures: the Support Vector Machine (SVM) method and the graph-based method using node labeling, edge filtering, Dual Simulation, and global-constraint validation. |
-| [`appendix-c-svm-feature-vector.tex`](appendices/appendix-c-svm-feature-vector.tex) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
+| [`appendix-a-patterns-antipatterns.pdf`](appendices/appendix-a-patterns-antipatterns.pdf) | Defines the microservice design patterns and antipatterns examined in the dissertation, explains their architectural intent or quality risk, and states why they can be detected through static analysis. |
+| [`appendix-b-pattern-mining-methods.pdf`](appendices/appendix-b-pattern-mining-methods.pdf) | Documents the two pattern-mining procedures: the Support Vector Machine (SVM) method and the graph-based method using node labeling, edge filtering, Dual Simulation, and global-constraint validation. |
+| [`appendix-c-svm-feature-vector.pdf`](appendices/appendix-c-svm-feature-vector.pdf) | Gives the detailed definition and initialization of the 30-element SVM feature vector, including Master, Worker, and Client roles and the worked API Gateway subgraph example. |
 
 The translated appendices preserve the original labels, cross-references, citations, algorithms, equations, and table structure so that references already present in the dissertation remain traceable.
 
-## LaTeX integration
-
-[`thesis-appendices-en.tex`](thesis-appendices-en.tex) is the master English LaTeX file and includes all three appendix files with `\input`. To compile it within the original dissertation project, retain the thesis dependencies used by the source document, including `IUST-Thesis.cls`, `commands.tex`, the `figs/` assets, and `empirical_software_engineering_references.bib`.
-
-If the appendices are included directly in another master document, use:
-
-```latex
-\input{appendices/appendix-a-patterns-antipatterns}
-\input{appendices/appendix-b-pattern-mining-methods}
-\input{appendices/appendix-c-svm-feature-vector}
-```
-
-## Repository structure
-
-```text
-.
-├── README.md
-├── thesis-appendices-en.tex
-├── appendices/
-│   ├── appendix-a-patterns-antipatterns.tex
-│   ├── appendix-b-pattern-mining-methods.tex
-│   └── appendix-c-svm-feature-vector.tex
-└── docs/
-    └── dissertation-workflow-en.png
 ```
