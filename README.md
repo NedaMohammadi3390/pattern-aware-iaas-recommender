@@ -68,3 +68,30 @@ The following peer-reviewed publications constitute the principal scholarly outp
 4. “A Two-Stage Location-Sensitive and User Preference-Aware Recommendation System,” *Expert Systems with Applications*, 2022. **JCR Q1; Impact Factor: 9.0.** Dissertation contribution: the proposed service-recommendation approach.
 
 5. “A Pattern-Aware Design and Implementation Guideline for Microservice-Based Systems,” in *Proceedings of the 27th International Computer Conference, Computer Society of Iran (CSICC)*, Tehran, Iran, 2022. Dissertation contribution: analysis of microservice design patterns.
+
+6. ## Research Outputs and Publications
+
+The research presented in this dissertation has resulted in, and has been supported by, the following peer-reviewed publications. These works address different components of the proposed research framework, including systematic analysis of cloud brokerage, microservice pattern and anti-pattern detection, benchmarking of pattern detection methods, service recommendation, and pattern-aware microservice design.
+
+1. **“BenchPDM: Benchmarking Pattern Detection Methods in Microservice-Based Systems Using Automatically Generated Pattern-Assisted Testbeds.”**
+   *Empirical Software Engineering*, 2026.
+   **Contribution to the dissertation:** Benchmarking framework for evaluating pattern and anti-pattern detection methods.
+
+2. **“On the Engineering of Robust Microservice Architectures through Anti-Pattern Recognition.”**
+   *The Journal of Systems & Software*, 2026.
+   **Contribution to the dissertation:** Proposed approach for detecting microservice architectural patterns and anti-patterns.
+
+3. **“Cloud Broker: A Systematic Mapping Study.”**
+   *IEEE Transactions on Services Computing*, 2023.
+   **Contribution to the dissertation:** Systematic mapping study providing the theoretical foundation for cloud service brokerage and service selection.
+
+4. **“A Two-Stage Location-Sensitive and User Preference-Aware Recommendation System.”**
+   *Expert Systems with Applications*, 2022.
+   **Contribution to the dissertation:** Service recommendation approach underlying the recommendation component of the proposed framework.
+
+5. **“A Pattern-Aware Design and Implementation Guideline for Microservice-Based Systems.”**
+   *27th International Computer Conference, Computer Society of Iran (CSICC), Tehran, Iran*, 2022.
+   **Contribution to the dissertation:** Analysis of microservice patterns and pattern-aware design principles.
+
+These publications collectively provide the theoretical foundations, methodological components, empirical evaluations, and supporting techniques developed and integrated within the dissertation.
+
